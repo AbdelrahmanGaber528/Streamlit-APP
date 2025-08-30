@@ -1,7 +1,7 @@
 import streamlit as st 
 import numpy as np
-# import seaborn as sns
-# import matplotlib.pyplot as plt
+import seaborn as sns
+import matplotlib.pyplot as plt
 import pandas as pd
 import plotly.express as px
 
@@ -38,7 +38,7 @@ if file != None :
     numerical_col = df.select_dtypes(include=np.number).columns.to_list()
 
     # set all in vertical line ; 
-    tab1 , tab2 = st.tabs(["Scatter","Histogram"])
+    tab1 , tab2 ,tab3= st.tabs(["Scatter","Histogram","Heatmap])
 
     with tab1:
 
@@ -64,14 +64,14 @@ if file != None :
         
         st.plotly_chart(histogram)
 
-    # with tab3 : 
-    #     # get num columns
-    #     numeric_df = df.select_dtypes(include=np.number)
-    #     # heatmap
-    #     fig, ax = plt.subplots()
-    #     sns.heatmap(numeric_df.corr(), annot=True, ax=ax,)
-    #     # rotation of words
-    #     plt.xticks(rotation=45)
-    #     plt.yticks(rotation=45)
+    with tab3 : 
+        # get num columns
+        numeric_df = df.select_dtypes(include=np.number)
+        # heatmap
+        fig, ax = plt.subplots()
+        sns.heatmap(numeric_df.corr(), annot=True, ax=ax,)
+        # rotation of words
+        plt.xticks(rotation=45)
+        plt.yticks(rotation=45)
 
-    #     st.pyplot(fig)
+        st.pyplot(fig)
