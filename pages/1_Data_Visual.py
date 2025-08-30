@@ -38,7 +38,7 @@ if file != None :
     numerical_col = df.select_dtypes(include=np.number).columns.to_list()
 
     # set all in vertical line ; 
-    tab1 , tab2 ,tab3= st.tabs(["Scatter","Histogram","Heatmap])
+    tab1 , tab2 ,tab3= st.tabs(["Scatter","Histogram","Heatmap"])
 
     with tab1:
 
