@@ -7,4 +7,4 @@ st.set_page_config(
 st.write("# Welcome To My Project ! ")
 
 
-st.sidebar.success("Pages")
+st.sidebar.success("Select Page From UP ")
